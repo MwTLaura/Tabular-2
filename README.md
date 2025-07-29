@@ -76,20 +76,20 @@ Understanding the data before modeling is crucial, especially in behavioral scie
 **Feature Distributions (Scaled)**
 After standardization, we examined the distribution of each input feature to detect outliers and understand shape characteristics:
 
-1. Screen Time
-The daily_screen_time_min distribution is right-skewed, with most values clustered between -1 and 1 (i.e., near the mean), but with several high outliers. This confirms that while most users fall in a narrow usage band, a few exhibit extremely high screen time. These outliers could represent binge behavior or atypical days.
+1. Screen Time: 
+- The daily_screen_time_min distribution is right-skewed, with most values clustered between -1 and 1 (i.e., near the mean), but with several high outliers. This confirms that while most users fall in a narrow usage band, a few exhibit extremely high screen time. These outliers could represent binge behavior or atypical days.
 
-2. App Switching
-The num_app_switches distribution is fairly multimodal and jagged. This reflects real behavioral patterns: some users frequently switch between apps (perhaps due to distraction), while others use fewer, more consistently.
+2. App Switching:
+- The num_app_switches distribution is fairly multimodal and jagged. This reflects real behavioral patterns: some users frequently switch between apps (perhaps due to distraction), while others use fewer, more consistently.
 
-3. Sleep
-sleep_hours is nearly normal but with slightly heavier tails, indicating some outliers in sleep behavior, likely due to late nights or sleep tracking inconsistencies.
+3. Sleep:
+- sleep_hours is nearly normal but with slightly heavier tails, indicating some outliers in sleep behavior, likely due to late nights or sleep tracking inconsistencies.
 
-4. Notifications
-notification_count shows a strong central peak, with values mostly centered around the mean. A few high-notification days stretch the upper end, possibly reflecting days of high digital activity or interruptions.
+4. Notifications:
+- notification_count shows a strong central peak, with values mostly centered around the mean. A few high-notification days stretch the upper end, possibly reflecting days of high digital activity or interruptions.
 
-5. Social Media Time
-This distribution is notably skewed right. Most people spend a relatively modest amount of time on social media, but a small minority logs significantly more time, suggesting potential compulsive usage or reliance on social platforms.
+5. Social Media Time:
+- This distribution is notably skewed right. Most people spend a relatively modest amount of time on social media, but a small minority logs significantly more time, suggesting potential compulsive usage or reliance on social platforms.
 
 
 <img width="783" height="672" alt="Image" src="https://github.com/user-attachments/assets/e8c03635-1b55-4009-b5da-6812b2ea6084" />
