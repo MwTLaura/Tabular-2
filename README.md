@@ -53,6 +53,7 @@ Size & Format:
 
 - We performed an 80/20 train-test split for evaluation
 
+---
 ### **Preprocessing**
 
 Before modeling, the following steps were taken:
@@ -63,6 +64,7 @@ Before modeling, the following steps were taken:
 
 - Standardized all input features using StandardScaler, ensuring models treated them equally
 
+---
 ### **Data Visualization**
 
 Understanding the data before modeling is crucial, especially in behavioral science, where features often behave in non-obvious ways. Below are key visualizations and interpretations that shaped how we approached the problem.
@@ -107,7 +109,7 @@ This heatmap shows the Pearson correlation coefficients between all behavioral f
 
 These weak-to-moderate correlations suggest the signal is subtle, which is typical in mental health data and makes predictive modeling both challenging and meaningful.
 
-
+---
 ### **Problem Formulation**
 
 The projectt was a supervised regression problem:
@@ -124,7 +126,7 @@ Models used:
 
 - XGBoost Regressor (optimized gradient boosting)
 
-
+---
 ### **Training Setup**
 
 - Software: Python 3.11, scikit-learn, XGBoost, matplotlib, pandas
@@ -158,6 +160,7 @@ This project demonstrates that:
 
 - Random Forest delivered the best trade-off between interpretability and performance, while XGBoost showed promise but needs tuning.
 
+---
 
 ### **Future Work**
 
