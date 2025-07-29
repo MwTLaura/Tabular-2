@@ -141,9 +141,60 @@ We used RMSE, MAE, and R² Score to evaluate the models.
 
 ---
 
-### **Performance Comparison**
+### **Performance & Comparison**
+
+To model the relationship between digital behaviors and a user's self-reported focus score, we formulated this as a supervised regression task. Our goal was to predict a continuous focus_score variable from behavioral features using several standard machine learning models. We selected three models that balance interpretability, flexibility, and performance:
+
+<img width="592" height="577" alt="Image" src="https://github.com/user-attachments/assets/71f280e0-e962-4272-9422-f0118a41e964" />
+
+**Linear Regression**
+- We began with Linear Regression as a baseline model. Its simplicity makes it easy to interpret and useful for understanding which features have linear associations with the target variable. While it assumes linearity and independence among features.
+
+- R² Score: 0.411
+
+- RMSE: 0.484
+
+- MAE: 0.397
+
+- Visualization:
+The plot of actual vs. predicted focus scores shows a moderate positive trend, although predictions cluster and fail to fully capture variability at higher focus levels. This indicates that while the model captures some signal, it's limited in flexibility.
+
+<img width="588" height="580" alt="Image" src="https://github.com/user-attachments/assets/9c56cfb7-c7fc-4243-b551-00f2277965db" />
+
+** Random Forest**
+To capture nonlinear relationships and interactions between features, we introduced a Random Forest model. This ensemble method aggregates predictions from multiple decision trees, which allows it to model complex patterns in the data without strong assumptions about linearity.
+
+- R² Score: 0.442
+
+- RMSE: 0.471
+
+- MAE: 0.390
+
+- Visualization:
+The predicted vs. actual scatterplot improved in tightness around the diagonal compared to linear regression, suggesting the model was better at adapting to subtle trends in the data. However, variance in predictions remains, especially at higher actual focus scores.
+
+<img width="590" height="582" alt="Image" src="https://github.com/user-attachments/assets/74bfa97e-2650-4864-aa27-08d1c2680279" />
+
+**XGBoost Regressor**
+Finally, we experimented with XGBoost, a powerful gradient boosting algorithm known for its predictive strength in structured data tasks. It builds trees sequentially, correcting errors at each step and often outperforming bagged methods like random forests.
+
+- R² Score: 0.345
+
+- RMSE: 0.511
+
+- MAE: 0.411
+
+- Visualization:
+Despite XGBoost's reputation, it underperformed here. The predicted values show more scatter, and the regression line diverges more frequently from the true scores. One possible reason is overfitting to noise in the small dataset or insufficient tuning.
 
 
+<img width="890" height="591" alt="Image" src="https://github.com/user-attachments/assets/63bc5696-0fb1-4b21-97d2-e204cc789d72" />
+
+- Best Overall: Random Forest achieved the highest R² and lowest error metrics, balancing flexibility with generalization.
+
+- Most Interpretable: Linear Regression offered the clearest insight into feature influence, despite slightly lower performance.
+
+- Underperformer: XGBoost surprisingly lagged, likely due to overfitting or data limitations.
 
 
 ---
