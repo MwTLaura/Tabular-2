@@ -11,7 +11,7 @@ The idea of this project is simple: can we estimate how focused a person feels o
 
 We live in an era where digital devices collect vast amounts of behavioral data passively, without requiring users to fill out forms or check boxes. If we could use this passively collected data to estimate meaningful cognitive states like focus, it could revolutionize how we build tools for mental health and productivity.
 
-This project approaches the task as a supervised regression problem, where the goal is to predict the focus_score (a self-reported daily score) based on behavioral signals such as screen time, app switching frequency, notificaton count and sleep. We intentionally avoided using mood or anxiety scores as predictors to simulate a realistic, passive-sensing setup that could work in practice.
+This project approaches the task as a supervised regression problem, where the goal is to predict the focus_score (a self-reported daily score) based on behavioral signals such as screen time, app switching frequency, notification count and sleep. We intentionally avoided using mood or anxiety scores as predictors to simulate a realistic, passive-sensing setup that could work in practice.
 
 Three models were developed and compared:
 
