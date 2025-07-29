@@ -133,7 +133,7 @@ This project demonstrates that:
   
 --- 
 
-## **Reproducibility**
+## **How to reproduce**
 
 To fully reproduce the results:
 
@@ -154,7 +154,7 @@ To fully reproduce the results:
 
 ---
 
-## *8Citations**
+## **Citations**
 Dataset: [Mental Health and Digital Behavior 2020–2024, Kaggle](https://www.kaggle.com/datasets/atharvasoundankar/mental-health-and-digital-behavior-20202024)
 
 
