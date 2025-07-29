@@ -65,9 +65,47 @@ Before modeling, the following steps were taken:
 
 ### **Data Visualization**
 
+Understanding the data before modeling is crucial, especially in behavioral science, where features often behave in non-obvious ways. Below are key visualizations and interpretations that shaped how we approached the problem.
+
+<img width="590" height="401" alt="Image" src="https://github.com/user-attachments/assets/f0b7a5fc-0fcd-4447-8a00-35093181f7d6" />
+
+<img width="588" height="775" alt="Image" src="https://github.com/user-attachments/assets/b774e6e8-f8a6-4171-a7af-025563696d84" />
+
+<img width="588" height="786" alt="Image" src="https://github.com/user-attachments/assets/43a95a25-d7ca-4b42-81ab-71a5759ab9d0" />
+
+**Feature Distributions (Scaled)**
+After standardization, we examined the distribution of each input feature to detect outliers and understand shape characteristics:
+
+1. Screen Time
+The daily_screen_time_min distribution is right-skewed, with most values clustered between -1 and 1 (i.e., near the mean), but with several high outliers. This confirms that while most users fall in a narrow usage band, a few exhibit extremely high screen time. These outliers could represent binge behavior or atypical days.
+
+2. App Switching
+The num_app_switches distribution is fairly multimodal and jagged. This reflects real behavioral patterns: some users frequently switch between apps (perhaps due to distraction), while others use fewer, more consistently.
+
+3. Sleep
+sleep_hours is nearly normal but with slightly heavier tails, indicating some outliers in sleep behavior, likely due to late nights or sleep tracking inconsistencies.
+
+4. Notifications
+notification_count shows a strong central peak, with values mostly centered around the mean. A few high-notification days stretch the upper end, possibly reflecting days of high digital activity or interruptions.
+
+5. Social Media Time
+This distribution is notably skewed right. Most people spend a relatively modest amount of time on social media, but a small minority logs significantly more time, suggesting potential compulsive usage or reliance on social platforms.
 
 
+<img width="783" height="672" alt="Image" src="https://github.com/user-attachments/assets/e8c03635-1b55-4009-b5da-6812b2ea6084" />
 
+**Correlation Heatmap**
+This heatmap shows the Pearson correlation coefficients between all behavioral features and the target focus_score. Key insights:
+
+- Focus score has a negative correlation with most behavioral features.
+
+- Highest negative correlation is with notification_count (-0.34)
+
+- daily_screen_time_min (-0.31) and num_app_switches (-0.28) also show meaningful inverse relationships
+
+- Surprisingly, sleep hours have nearly no correlation with focus in this dataset : a finding that may be due to either low variance or noise in self-reported sleep.
+
+These weak-to-moderate correlations suggest the signal is subtle, which is typical in mental health data and makes predictive modeling both challenging and meaningful.
 
 
 ### **Problem Formulation**
