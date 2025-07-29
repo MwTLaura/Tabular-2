@@ -161,7 +161,7 @@ The plot of actual vs. predicted focus scores shows a moderate positive trend, a
 
 <img width="588" height="580" alt="Image" src="https://github.com/user-attachments/assets/9c56cfb7-c7fc-4243-b551-00f2277965db" />
 
-** Random Forest**
+**Random Forest**
 To capture nonlinear relationships and interactions between features, we introduced a Random Forest model. This ensemble method aggregates predictions from multiple decision trees, which allows it to model complex patterns in the data without strong assumptions about linearity.
 
 - R² Score: 0.442
