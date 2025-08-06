@@ -69,14 +69,14 @@ Before modeling, the following steps were taken:
 
 Understanding the data before modeling is crucial, especially in behavioral science, where features often behave in non-obvious ways. Below are key visualizations and interpretations that shaped how we approached the problem.
 
-<img width="590" height="401" alt="Image" src="https://github.com/user-attachments/assets/f0b7a5fc-0fcd-4447-8a00-35093181f7d6" />
+<img width="592" height="775" alt="Image" src="https://github.com/user-attachments/assets/9ca6814a-e980-4556-baa2-7e4f845e26d7" />
 
-<img width="588" height="775" alt="Image" src="https://github.com/user-attachments/assets/b774e6e8-f8a6-4171-a7af-025563696d84" />
+<img width="588" height="787" alt="Image" src="https://github.com/user-attachments/assets/867fa796-fbeb-43db-abf4-6883f37b7ec6" />
 
-<img width="588" height="786" alt="Image" src="https://github.com/user-attachments/assets/43a95a25-d7ca-4b42-81ab-71a5759ab9d0" />
+<img width="592" height="396" alt="Image" src="https://github.com/user-attachments/assets/8a69cf9a-0a88-49b4-9876-d9dce0be462e" />
 
-**Feature Distributions (Scaled)**
-After standardization, we examined the distribution of each input feature to detect outliers and understand shape characteristics:
+**Feature Distributions**
+We examined the distribution of each input feature to detect outliers and understand shape characteristics:
 
 1. Screen Time: 
 - The daily_screen_time_min distribution is right-skewed, with most values clustered between -1 and 1 (i.e., near the mean), but with several high outliers. This confirms that while most users fall in a narrow usage band, a few exhibit extremely high screen time. These outliers could represent binge behavior or atypical days.
